@@ -8,6 +8,9 @@
       "matches": [
         "https://chat.openai.com/*"
       ],
+      "css": [
+        "styles.css"
+      ],
       "js": [
         "content.js"
       ]

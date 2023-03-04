@@ -1,3 +1,5 @@
+import hotreload from 'crx-hotreload';
+
 function sendMessage() {
   const textarea = document.querySelector('textarea[tabindex="0"]');
   if (textarea) {
@@ -14,13 +16,15 @@ function sendMessage() {
 }
 
 window.addEventListener('load', () => {
+  const textarea = document.querySelector('textarea[tabindex="0"]');
+  const textareaRect = textarea.getBoundingClientRect();
+
   const button = document.createElement('button');
   button.innerText = '続き';
-  button.style.position = 'fixed';
-  button.style.bottom = '20px';
-  button.style.right = '20px';
+  button.style.position = 'absolute';
+  button.style.left = `${textareaRect.left + textarea.offsetWidth - 40}px`; // textareaの右側に配置する
+  button.style.top = `${textareaRect.top - 40}px`; // textareaと同じ高さに配置する
   button.style.zIndex = '9999';
-  button.addEventListener('click', sendMessage);
 
   const body = document.body || document.documentElement;
   body.appendChild(button);
