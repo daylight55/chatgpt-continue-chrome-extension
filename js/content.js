@@ -18,7 +18,7 @@ window.addEventListener('load', () => {
   const textareaRect = textarea.getBoundingClientRect();
 
   const button = document.createElement('button');
-  button.innerText = '続き';
+  button.innerText = '続';
   button.style.position = 'absolute';
   button.style.left = `${textareaRect.left + textarea.offsetWidth - 40}px`; // textareaの右側に配置する
   button.style.top = `${textareaRect.top - 40}px`; // textareaと同じ高さに配置する
