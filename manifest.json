@@ -9,15 +9,15 @@
         "https://chat.openai.com/*"
       ],
       "css": [
-        "styles.css"
+        "css/content.css"
       ],
       "js": [
-        "content.js"
+        "js/content.js"
       ]
     }
   ],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "js/background.js"
   },
   "commands": {
     "send-continue-message": {

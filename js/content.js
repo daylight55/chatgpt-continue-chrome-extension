@@ -1,5 +1,3 @@
-import hotreload from 'crx-hotreload';
-
 function sendMessage() {
   const textarea = document.querySelector('textarea[tabindex="0"]');
   if (textarea) {
